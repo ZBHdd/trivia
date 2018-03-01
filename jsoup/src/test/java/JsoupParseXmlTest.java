@@ -129,4 +129,11 @@ class JsoupParseXmlTest {
         }while (xml.select("#"+id) == null);
         return id;
     }
+
+    @Test
+    void DemoAdd(){
+        for(int i=0;i<50;i++){
+            addNode();
+        }
+    }
 }
