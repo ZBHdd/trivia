@@ -18,8 +18,8 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
 class JsoupParseXmlTest {
-    private static String changeNode = "#487";
-    private static String pNode = "#830";
+    private static String changeNode = "#565";
+    private static String pNode = "#846";
 
 
 
@@ -54,6 +54,7 @@ class JsoupParseXmlTest {
 
     @Test
     void delNode() {
+        addNode();
         String s = JsoupParseXml.delNode(xml, JsoupParseXmlTest.changeNode);
         assertNotNull(s,"没找到该内容的节点："+JsoupParseXmlTest.changeNode);
     }
@@ -66,7 +67,7 @@ class JsoupParseXmlTest {
 
     @Test
     void findClildNodes() {
-        JsoupParseXml.findClildNodes(xml, changeNode+" "+nodeNames[2]);
+        JsoupParseXml.findClildNodes(xml, "#26 "+nodeNames[3]);
     }
 
     @Test

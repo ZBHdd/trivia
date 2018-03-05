@@ -5,10 +5,10 @@ import org.jsoup.select.Elements;
 public class JsoupParseXml {
     /**
      * 添加节点
-     * @param xml
-     * @param node
-     * @param parent
-     * @return
+     * @param xml 解析xml得到的对象
+     * @param node 节点
+     * @param parent 父节点
+     * @return 解析xml得到的对象
      */
     public static Document addNode(Document xml, String node, String parent){
         if(xml ==null || node == null || parent == null) {
@@ -33,7 +33,7 @@ public class JsoupParseXml {
         }
         Elements select = JsoupParseXml.findNode(xml, node);
         String del = null;
-        if(select != null){
+        if(select!=null && select.size() != 0){
             del = select.first().parent().html();
             select.first().parent().html("");
         }
@@ -44,7 +44,7 @@ public class JsoupParseXml {
      * 查看节点
      * @param xml 解析xml得到的对象
      * @param node 节点
-     * @return
+     * @return 节点集
      */
     public static Elements findNode(Document xml, String node){
         if(xml ==null || node == null){
@@ -55,9 +55,9 @@ public class JsoupParseXml {
 
     /**
      * 利用 组合选择器 查看子节点个数
-     * @param xml
-     * @param node
-     * @return
+     * @param xml 解析xml得到的对象
+     * @param node 节点
+     * @return 个数
      */
     public static int findClildNodes(Document xml, String node){
         if(xml ==null || node == null){
