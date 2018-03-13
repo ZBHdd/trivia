@@ -15,8 +15,7 @@
 
     <modules>
         <module>jsoup</module>
-        <module>someTools</module>
-        <module>lintCode</module>
+        <module>leetCode</module>
     </modules>
     
     <dependencies>
