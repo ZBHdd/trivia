@@ -1,6 +1,5 @@
-package test.easy;
+package easy;
 
-import easy.TwoSum;
 import org.junit.jupiter.api.Test;
 
 import java.util.Arrays;

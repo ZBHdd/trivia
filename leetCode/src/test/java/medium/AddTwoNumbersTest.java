@@ -1,7 +1,5 @@
-package test.medium;
-
+package medium;
 import entity.ListNode;
-import medium.AddTwoNumbers;
 import org.junit.jupiter.api.Test;
 
 class AddTwoNumbersTest {
