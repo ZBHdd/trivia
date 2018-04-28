@@ -17,7 +17,7 @@
         <module>jsoup</module>
         <module>leetCode</module>
     </modules>
-    
+
     <dependencies>
         <dependency>
             <groupId>org.junit.jupiter</groupId>

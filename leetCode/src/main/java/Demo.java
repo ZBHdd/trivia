@@ -6,7 +6,7 @@ public class Demo {
         for(Animal a : Animal.values()){
             Class<?> server = a.getValue();
             Object object = server.newInstance();
-            Method method = server.getMethod(a.getMethod(), Object.class);
+            Method method = server.getMethod(a.getMethod(),Object.class);
             method.invoke(object,a.getName());
             
         }
@@ -15,6 +15,7 @@ public class Demo {
 
 interface BaseClient{
     void call(Object s);
+    void hit(Object s);
 }
 
 
@@ -23,6 +24,10 @@ class DogClient implements BaseClient{
     public void call(Object s) {
         System.out.println(String.format("I am a %s,I can wang wang wang", (String)s));
     }
+
+    public void hit(Object s) {
+        System.out.println(String.format("I am a %s,I hit dog", (String)s));
+    }
 }
 
 class CatClient implements BaseClient{
@@ -30,10 +35,14 @@ class CatClient implements BaseClient{
     public void call(Object s) {
         System.out.println(String.format("I am a %s,I can miao miao miao", (String)s));
     }
+
+    public void hit(Object s) {
+        System.out.println(String.format("I am a %s,I hit cat", (String)s));
+    }
 }
 
 enum Animal{
-    DOG("dog","DogClient","call"),CAT("cat","CatClient","call");
+    DOG("dog","DogClient","call"),CAT("cat","CatClient","hit");
 
     private String name;
     private String value;
