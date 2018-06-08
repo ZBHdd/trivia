@@ -16,6 +16,7 @@
     <modules>
         <module>jsoup</module>
         <module>leetCode</module>
+        <module>thirdInterfacePays</module>
     </modules>
 
     <dependencies>
