@@ -53,7 +53,7 @@ public class HuaxiaAccountServiceBaseImplTest {
             map.put("ContactPhone", "18538706070");
             map.put("Phone", map.get("ContactPhone"));
             map.put("ContactAddr", "北京市东城区");
-            map.put("BusinessName", "王挣");
+            map.put("BusinessName", "18538706070");
         }
         FactoryBase factoryBase = new ClientFactory();
         HuaxiaAccountServiceBase service = (HuaxiaAccountServiceBase) factoryBase
