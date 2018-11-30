@@ -28,6 +28,7 @@ public class HuaxiaAccountServiceBaseImpl extends HuaxiaClient implements Huaxia
 
     @Override
     public JsonResult changeAccountStatus(Map<String, String> map) {
+        map.put("IsCoerce", "1");
         return super.callInterface(map, ServiceCode.CHANGEACCOUNTSTATUS.getCode());
     }
 

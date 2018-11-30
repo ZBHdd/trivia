@@ -81,7 +81,6 @@ public class HuaxiaAccountServiceBaseImplTest {
         map.put("SubAccount", subAccount);
         map.put("TradeMemCode", memBerCode);
         map.put("State", "1");
-        map.put("IsCoerce", "");
         FactoryBase factoryBase = new ClientFactory();
         HuaxiaAccountServiceBase service = (HuaxiaAccountServiceBase) factoryBase
                 .createClient(Client.HUAXIA).getService(Client.HUAXIA, Service.ACCOUNT);
