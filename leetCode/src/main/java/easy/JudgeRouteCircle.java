@@ -12,6 +12,7 @@ public class JudgeRouteCircle {
         int rStep = 0;
         int uStep = 0;
         char[] chars = route.toCharArray();
+        //遍历字符 获取行动后的坐标，如坐标为（0,0）则会回到原点
         for (char aChar : chars) {
             switch (String.valueOf(aChar)){
                 case "R":

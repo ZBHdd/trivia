@@ -1,5 +1,6 @@
 package easy;
 
+import java.util.Arrays;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -71,5 +72,10 @@ public class TwoSum {
             }
         }
         return null;
+    }
+    public static void main(String[] args){
+        int[] arr = new int[]{1,2,3,4,10,11};
+
+        System.out.println(Arrays.stream(arr).sum());
     }
 }
