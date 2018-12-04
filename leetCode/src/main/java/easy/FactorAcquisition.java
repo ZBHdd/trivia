@@ -5,7 +5,7 @@ import java.util.Scanner;
 /**
  * @ClassName FactorAcquisition
  * @Description TODO
- * @Author Administrator
+ * @Author Satan
  **/
 public class FactorAcquisition {
     public static void main(String[] args) {

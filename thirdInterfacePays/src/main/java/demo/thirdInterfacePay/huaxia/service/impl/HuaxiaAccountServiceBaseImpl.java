@@ -9,7 +9,7 @@ import demo.thirdInterfacePay.huaxia.service.HuaxiaAccountServiceBase;
 import java.util.Map;
 
 /**
- * @author Administrator
+ * @author Satan
  */
 public class HuaxiaAccountServiceBaseImpl extends HuaxiaClient implements HuaxiaAccountServiceBase {
 

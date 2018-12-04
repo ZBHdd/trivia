@@ -16,7 +16,7 @@ import java.util.Map;
 /**
  * @ClassName AWS.AWS
  * @Description TODO
- * @Author Administrator
+ * @Author Satan
  **/
 
 public class AWS  {

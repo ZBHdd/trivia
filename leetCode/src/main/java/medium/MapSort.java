@@ -6,7 +6,7 @@ import java.util.*;
 /**
  * @ClassName MapSort
  * @Description TODO
- * @Author Administrator
+ * @Author Satan
  **/
 public class MapSort {
 

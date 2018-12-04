@@ -8,7 +8,7 @@ import java.util.List;
 /**
  * @ClassName ListSort
  * @Description TODO
- * @Author Administrator
+ * @Author Satan
  **/
 public class ListSort <E>{
     List<E> sort(List<E> list){
