@@ -10,7 +10,7 @@ package utils;
 import java.io.UnsupportedEncodingException;
 import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
-import java.util.Arrays;
+import java.util.*;
 
 public class EncryptUtil {
 
@@ -77,7 +77,14 @@ public class EncryptUtil {
     }
 
     public static void main(String[] args) {
-        System.out.println(hmacSign("48122917854252191[{\"coin\": \"BTC\",\"quantity\": 1,\"remark\": \"冻结\"}]",
-                "1359f4109f896e8cd931c5fe74ae9254"));
+        Map<String, String> map = new TreeMap<>();
+        map.put("userName","296202351@qq.com");
+        map.put("details","[{\"coin\":\"USDT\",\"quantity\":0.0000100000,\"remark\":\"邀请返币\"}]");
+        String privateKey = "216b1de26b8098c7bfb56537d707109c";
+        StringBuilder sb = new StringBuilder();
+        map.forEach((k,v) -> sb.append(v.toString()));
+
+        String sign = hmacSign(sb.toString(),privateKey);
+        System.out.println(sign);
     }
 }
