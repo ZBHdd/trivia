@@ -31,6 +31,7 @@
         <module>leetCode</module>
         <module>thirdInterfacePays</module>
         <module>InterDemo</module>
+        <module>thread</module>
     </modules>
 
     <dependencies>
