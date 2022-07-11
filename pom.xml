@@ -11,6 +11,8 @@
 
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+        <scala.version>2.11.12</scala.version>
+        <roaring.version>0.9.2</roaring.version>
     </properties>
 
     <build>
@@ -32,6 +34,7 @@
         <module>thirdInterfacePays</module>
         <module>InterDemo</module>
         <module>thread</module>
+        <module>bitmap</module>
     </modules>
 
     <dependencies>
@@ -80,6 +83,19 @@
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
             <version>1.18.2</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.scala-lang</groupId>
+            <artifactId>scala-compiler</artifactId>
+            <version>${scala.version}</version>
+            <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.roaringbitmap</groupId>
+            <artifactId>RoaringBitmap</artifactId>
+            <version>${roaring.version}</version>
         </dependency>
     </dependencies>
 

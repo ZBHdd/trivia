@@ -42,4 +42,9 @@ public class SortTest {
     public void selectSortTest() {
         sort = new SelectSort();
     }
+
+    @Test
+    public void demo(){
+        throw new IllegalArgumentException("xxx");
+    }
 }

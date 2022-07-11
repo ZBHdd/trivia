@@ -1,21 +1,15 @@
 package thread;
 
-import scala.runtime.BoxedUnit;
-
 import java.util.Arrays;
 
-public class InterruptThread {
+public class Interrupt2Thread {
 
     public static void main(String[] args) {
         Thread t = new Thread(() -> {
-            long num = 0;
+            Long num = 0L;
             while (true) {
-                //正常执行的时候不会打断，所以需要自己判断
-                if(num++ % 1000 == 1){
-                    if(Thread.interrupted()){
-                        throw new RuntimeException("interrupted");
-                    }
-                }
+                num++;
+                Interrupt3Thread.testMap(num);
             }
         });
 
@@ -36,20 +30,13 @@ public class InterruptThread {
                         e.printStackTrace();
                     }
                     t.interrupt();
-                    Arrays.stream(t.getStackTrace()).forEach(System.out::println);
                     System.out.println(String.format("{%s} interrupt,thread status {%s}", t.getName(), t.getState()));
+                    Arrays.stream(t.getStackTrace()).forEach(s -> System.out.println(s.toString()));
                 }
             }
         }.setT(t));
 
         t.start();
         b.start();
-    }
-
-    public static BoxedUnit test(Long num) {
-        if (num % 10000 == 1) {
-            throw new IllegalArgumentException(" throw");
-        }
-        return BoxedUnit.UNIT;
     }
 }
