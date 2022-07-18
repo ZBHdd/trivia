@@ -13,7 +13,12 @@ import java.sql.SQLException;
 import java.sql.Statement;
 import java.util.Properties;
 
+/**
+ * @author hang.jia
+ */
 public class CalciteSimple<T extends schema.Schema> implements IConnect<T> {
+
+    @Override
     public Table connect(String sql, T t) throws ClassNotFoundException, SQLException {
         //创建Calcite Connection对象
         Class.forName("org.apache.calcite.jdbc.Driver");

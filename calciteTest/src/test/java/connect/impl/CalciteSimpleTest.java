@@ -1,11 +1,13 @@
 package connect.impl;
 
+import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
 import schema.TestSchema;
 import tech.tablesaw.api.Table;
 
 import java.sql.SQLException;
+
 
 
 public class CalciteSimpleTest {
@@ -20,7 +22,8 @@ public class CalciteSimpleTest {
 
     @Test
     public void testConnect() throws SQLException, ClassNotFoundException {
-        Table db = calciteSimple.connect("select u.id,u.name from test.users u", schema);
-        db.printAll();
+        Assert.assertNotNull(calciteSimple);
+        Table db = calciteSimple.connect("select id,name from test.users", schema);
+        System.out.println(db.printAll());
     }
 }
