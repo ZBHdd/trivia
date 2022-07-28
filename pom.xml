@@ -36,6 +36,7 @@
         <module>thread</module>
         <module>bitmap</module>
         <module>calciteTest</module>
+        <module>pattern</module>
     </modules>
 
     <dependencies>
